@@ -1,0 +1,10 @@
+-----Web Recorder------
+npx playwright codegen opensource-demo.orangehrmlive.com
+
+-----Show Report-------
+npx playwright show-report
+
+
+------test-------------
+npx playwright test  
+

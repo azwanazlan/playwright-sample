@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "sameSite": "Lax",
+      "name": "Loggedin",
+      "value": "True",
+      "domain": "opensource-demo.orangehrmlive.com",
+      "path": "/index.php/auth",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false
+    },
+    {
+      "sameSite": "Lax",
+      "name": "orangehrm",
+      "value": "ce4dff23f5a76504032a96e435cd1e17",
+      "domain": "opensource-demo.orangehrmlive.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true
+    }
+  ],
+  "origins": []
+}
