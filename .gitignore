@@ -9,5 +9,6 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 
+/my-report/
 /TodoMVC/my-report
 /OrangeHRM/my-report

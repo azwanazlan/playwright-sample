@@ -90,6 +90,7 @@ const config = {
   //testDir: 'tests',
   testMatch: '**/*.spec.js',
   forbidOnly: !!process.env.CI,
+  timeout: 60000,
   retries: process.env.CI ? 2 : 0,
   reporter:[ ['html', { outputFolder: 'my-report' }] ],
   use: {
@@ -105,14 +106,14 @@ const config = {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
 };
 

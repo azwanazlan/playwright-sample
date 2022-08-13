@@ -112,7 +112,7 @@ test.describe('Users',() => {
 test.describe('Employee List',() => { //Data driven from external xlsx file
   test.use({ storageState: 'storageState.json'}); //for reuse sign in state (Take note group members)
 
-    test('(+) Successfull add employee', async ({page}) => {
+    test('(+) Successfull add & delete employee', async ({page}) => {
         //get excel data
       var XLSX = require("xlsx");
       var workbook = XLSX.readFile("data/Employee.xlsx");
@@ -131,6 +131,14 @@ test.describe('Employee List',() => { //Data driven from external xlsx file
         await page.setInputFiles('#photofile',filePath);
         await page.locator('#btnSave').click();
         await expect(page.locator('#profile-pic')).toHaveText(firstName + ' ' + secondName);
+        const elem = await page.inputValue('#personal_txtEmployeeId');
+        await page.goto('https://opensource-demo.orangehrmlive.com/index.php/pim/viewEmployeeList/reset/1');
+        await page.locator('#empsearch_id').fill(elem);
+        await page.locator('#searchBtn').click();
+        await page.locator('//a[text()='+ '"' + elem + '"]//preceding::input[1]').check();
+        await page.locator('#btnDelete').click();
+        await page.locator('#dialogDeleteBtn').click();
+        await expect(page.locator('text=Successfully Deleted Close')).toBeVisible();
       } 
     });
   });
