@@ -96,7 +96,7 @@ const config = {
     trace: 'on',
     launchOptions: {
       slowMo: 100,
-      headless: false,
+      headless: true,
       }
   },
   globalSetup: require.resolve('./loginState'), //for save login

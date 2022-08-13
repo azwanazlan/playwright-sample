@@ -1,24 +1,24 @@
 {
   "cookies": [
     {
-      "sameSite": "Lax",
       "name": "Loggedin",
       "value": "True",
       "domain": "opensource-demo.orangehrmlive.com",
       "path": "/index.php/auth",
       "expires": -1,
       "httpOnly": true,
-      "secure": false
+      "secure": false,
+      "sameSite": "Lax"
     },
     {
-      "sameSite": "Lax",
       "name": "orangehrm",
-      "value": "ce4dff23f5a76504032a96e435cd1e17",
+      "value": "40c5f355f60053f7f600e08c4fb198cc",
       "domain": "opensource-demo.orangehrmlive.com",
       "path": "/",
       "expires": -1,
       "httpOnly": true,
-      "secure": true
+      "secure": true,
+      "sameSite": "Lax"
     }
   ],
   "origins": []

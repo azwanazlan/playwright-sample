@@ -4,6 +4,10 @@ npx playwright codegen opensource-demo.orangehrmlive.com
 -----Show Report-------
 npx playwright show-report
 
+npx playwright show-report OrangeHRM/my-report
+
+npx playwright show-report TodoMVC/my-report
+
 
 ------test-------------
 npx playwright test  
