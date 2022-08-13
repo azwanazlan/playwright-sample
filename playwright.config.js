@@ -87,7 +87,7 @@ const { devices } = require('@playwright/test');
 
 //@type {import('@playwright/test').PlaywrightTestConfig} 
 const config = {
-  testDir: 'tests',
+  //testDir: 'tests',
   testMatch: '**/*.spec.js',
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
